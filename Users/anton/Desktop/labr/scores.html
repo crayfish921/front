@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='labApp'>
+    <head>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js">
+       </script>
+       <script src="js/controllers.js">
+       </script>
+       <script src="https://apis.google.com/js/client.js?onload=init">
+       </script>
+    </head>
+<body id="body" ng-controller="ScoreBoardCtrl">
+
+<button onclick="location.href='/'">
+     Back
+</button>
+
+<table>
+	<thead>
+		<th>Id</th>
+		<th>Rounds</th>
+		<th>Score</th>
+	</thead>
+	<tr ng-repeat="score in scores">
+	     <td>{{score.session_id}}</td>
+	     <td>{{score.rounds}}</td>
+	     <td>{{score.score}}</td>    
+	</tr>
+</table>		
+     
+</body>
+</html>
